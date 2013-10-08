@@ -40,10 +40,32 @@ module.exports = function(grunt){
 				src:['dist/lds.<%= pkg.name %>.js'],
 				dest:'build/lds.<%= pkg.name %><%= pkg.version %>.min.js'
 			}
-		}
+		},
+		copy: {
+			cdn: {
+				files: [
+					{
+						src:"dist/lds.<%= pkg.name %>.js",
+						dest:"../../cdn/trunk/src/main/resources/ml/ldsorg/ver/scripts/<%= pkg.folder %>/lds.<%= pkg.name %><%= pkg.version %>.min.js"
+					},
+					{
+						src:"dist/lds.<%= pkg.name %>.js",
+						dest:"../../cdn/tags/test/ml/ldsorg/ver/scripts/<%= pkg.folder %>/lds.<%= pkg.name %><%= pkg.version %>.min.js"
+					},
+					{
+						src:"dist/lds.<%= pkg.name %>.js",
+						dest:"../../cdn/tags/stage/ml/ldsorg/ver/scripts/<%= pkg.folder %>/lds.<%= pkg.name %><%= pkg.version %>.min.js"
+					},
+					{
+						src:"dist/lds.<%= pkg.name %>.js",
+						dest:'../../cdn/tags/prod/ml/ldsorg/ver/scripts/<%= pkg.folder %>/lds.<%= pkg.name %><%= pkg.version %>.min.js'
+					}
+				]
+			}
 		}
 	});
 	//grunt plugins
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-include-replace');

@@ -1,14 +1,16 @@
 {
   "name": "makeFit",
+  "folder": "makefit",
   "title": "MakeFit",
   "url": "https://code.ldschurch.org/stash/projects/CSPFED/repos/makefit/browse",
   "author": "Aaron Barker",
   "copyright": "2013",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-contrib-jshint": "~0.4.3",
     "grunt-include-replace": "~0.2.0"

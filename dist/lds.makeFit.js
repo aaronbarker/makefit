@@ -1,7 +1,7 @@
 /*!
  * makeFit
  * @description	Makes and element fit into it
- * @version		1.1.1 - 2013/10/08
+ * @version		1.2.1 - 2013/10/08
  * @author		Aaron Barker
  * @requires	ui.widget.js
  * @copyright	Copyright Intellectual Reserve Inc. All rights reserved.
@@ -94,6 +94,6 @@
 		}
 	});
 	$.extend($.lds.makeFit, {
-		version: "1.1.1"
+		version: "1.2.1"
 	});
 })(jQuery);
