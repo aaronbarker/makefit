@@ -1,0 +1,17 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "camelcase": true,
+  "undef": true,
+  "quotmark": "double",
+  "unused": true,
+  "strict": true,
+  "browser": true,
+  "smarttabs": true,
+  "indent": 1,
+  "globals" : {
+    "jQuery": true
+  }
+}
