@@ -36,7 +36,7 @@
 			elem.addClass("makeFit-enabled");
 		},
 		fit:function(){
-			// console.debug("method: fit");
+			// console.debug("method: fit",this.element);
 			var opts = this.options, self = this, elem = this.element,
 				fitWithin = self.fitWithin,
 				fitWithinH = fitWithin.height(),
@@ -45,9 +45,7 @@
 				elemH,elemW,newTop,toSync;
 
 			if(fitWithin.is("img") && !fitWithin.height()){
-				// console.debug("setting timeout");
 				setTimeout(function(){
-					// console.debug("in timelone");
 					self.fit();
 				},opts.imgLoadTimeout);
 				return;
