@@ -62,7 +62,7 @@
 				// console.debug("fitWithinH:"+fitWithinH,"fitWithinW:"+fitWithinW,"elemH:"+elemH,"elemW:"+elemW);
 
 				if(elemH > fitWithinH || elemW > fitWithinW){
-					elem.add(fitWithin).addClass(""+this);
+					self.setClass(""+this);
 					// console.debug("too big! adding: "+this);
 				}
 			});
@@ -79,12 +79,23 @@
 				toSync = $(opts.sync);
 				if(toSync.index(elem) === toSync.length-1){ // only run this if we are the last element, so that all normal calculations will already have been run
 					$.each(sizeClasses,function(){
-						if(toSync.hasClass(""+this)){
-							toSync.addClass(""+this);
+						var theClass = ""+this;
+						if(toSync.hasClass(theClass)){
+							toSync.each(function(){
+								$(this).makeFit("setClass",theClass);
+							});
+
 						}
 					});
 				}
 			}
+		},
+		setClass: function(theClass){
+			var self = this,
+				opts = self.options,
+				elem = self.element;
+			// console.debug("method: setClass", elem, theClass);
+			return elem.add(opts.syncFitWithin?self.fitWithin:"").add(self.addClassTo).addClass(theClass);
 		},
 		destroy: function() {
 			$.Widget.prototype.destroy.apply(this, arguments); // call the default stuff
