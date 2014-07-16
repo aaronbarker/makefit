@@ -4,7 +4,7 @@
  * @version		@@version - @@date
  * @author		Aaron Barker
  * @requires	ui.widget.js
- * @copyright	Copyright Intellectual Reserve Inc. All rights reserved.
+ * @copyright	Copyright 2014 by Intellectual Reserve, Inc.
  */
 (function($) {
 	"use strict";
